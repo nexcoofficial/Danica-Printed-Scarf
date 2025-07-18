@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danica Printed Scarf - Hijab Segi Empat Motif Premium | Shafira</title>
+    <meta name="description" content="Shafira Danica Printed Scarf - Hijab kerudung segi empat motif dengan 6 pilihan warna bold. Material Nesla premium dengan finishing baby seam.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'shafira-blue': '#3B82F6',
+                        'shafira-gold': '#F59E0B',
+                        'shafira-pink': '#EC4899',
+                        'shafira-gray': '#6B7280',
+                        'shafira-light-gray': '#F9FAFB'
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        .color-option {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+        .color-option.active {
+            transform: scale(1.15);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+        }
+        .color-option.active::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 3px rgba(0,0,0,0.5);
+        }
+        .gallery-thumbnail {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .gallery-thumbnail:hover {
+            border-color: #3B82F6;
+            transform: scale(1.05);
+        }
+        .gallery-thumbnail.active {
+            border-color: #3B82F6;
+            transform: scale(1.05);
+        }
+        .floating-cta {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .spec-item {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .spec-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+        }
+        .video-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+        .video-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+        .video-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            background: rgba(59, 130, 246, 0.8);
+            border-radius: 50%;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .video-icon:hover {
+            background: rgba(59, 130, 246, 1);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-white font-body">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="https://plugolive.s3.ap-southeast-1.amazonaws.com/vendors/245/assets/image/1738632098935-Logo_Shafira_NEW-02.png" alt="Shafira" class="h-8">
+                    <span class="ml-2 text-sm font-semibold text-shafira-blue">
+                        <i class="fas fa-check-circle ml-1"></i> Official Store
+                    </span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#product" class="text-gray-700 hover:text-shafira-blue transition-colors">Produk</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-shafira-blue transition-colors">Galeri</a>
+                    <a href="#specs" class="text-gray-700 hover:text-shafira-blue transition-colors">Spesifikasi</a>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16 hero-gradient min-h-[80vh] sm:min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-shafira-blue/10 text-shafira-blue text-sm font-medium">
+                        <i class="fas fa-star mr-2"></i> Best Seller 2025
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 leading-tight tracking-tight">
+                        <span class="text-shafira-blue">Danica</span> Printed Scarf
+                        <span class="text-gray-800 block mt-1 sm:mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium italic">Hijab Segi Empat Motif</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                        Hadirkan kesan istimewa dalam setiap penampilanmu dengan motif bunga feminin yang elegan, 
+                        tersedia dalam 6 pilihan warna bold untuk melengkapi gaya harianmu.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="text-3xl font-bold text-shafira-blue">Rp165.000</div>
+                        <div class="text-xl text-gray-500 line-through">Rp199.000</div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <button onclick="scrollToOrder()" class="bg-shafira-blue text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 transition-colors floating-cta">
+                            <i class="fas fa-shopping-cart mr-2"></i>Pesan Sekarang
+                        </button>
+                        <button onclick="scrollToSpecs()" class="border border-shafira-blue text-shafira-blue px-8 py-4 rounded-xl font-semibold hover:bg-shafira-blue hover:text-white transition-colors">
+                            <i class="fas fa-info-circle mr-2"></i>Lihat Detail
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square bg-white rounded-2xl shadow-2xl p-4 sm:p-8">
+                        <img id="main-image" src="https://down-id.img.susercontent.com/file/id-11134207-7rbka-m74foa1s08c47b.webp" alt="Danica Printed Scarf" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-shafira-gold text-white px-4 py-2 rounded-full font-bold">
+                        <i class="fas fa-medal mr-2"></i>Premium Quality
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery Section -->
+    <section id="gallery" class="py-20 bg-shafira-light-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Galeri Produk</h2>
+                <p class="text-lg text-gray-600">Lihat detail produk dari berbagai sudut pandang</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div class="space-y-4">
+                    <div class="aspect-square bg-white rounded-2xl shadow-lg p-4">
+                        <img id="gallery-main" src="https://down-id.img.susercontent.com/file/id-11134207-7rbka-m74foa1s08c47b.webp" alt="Danica Scarf" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <div class="grid grid-cols-3 gap-2">
+                        <img onclick="changeImage(this)" src="https://down-id.img.susercontent.com/file/id-11134207-7rbka-m74foa1s08c47b.webp" alt="View 1" class="gallery-thumbnail active w-full rounded-lg cursor-pointer">
+                        <img onclick="changeImage(this)" src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lqu9ogyx0nqf55.webp" alt="View 2" class="gallery-thumbnail w-full rounded-lg cursor-pointer">
+                        <img onclick="changeImage(this)" src="https://down-id.img.susercontent.com/file/id-11134207-7r98x-lqu9ogx9339l14.webp" alt="View 3" class="gallery-thumbnail w-full rounded-lg cursor-pointer">
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Pilih Warna Favoritmu</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+                            <div class="color-option active" data-color="Light Grey" onclick="selectColor(this, 'Light Grey')">
+                                <img src="https://dfw7ggv03f58r.cloudfront.net/accounts/679b32fca497cd458b9f991d/products/679b4d04478ed1249386f9f5/679b4d06478ed1249386fabd.jpeg.resized2048.webp" alt="Light Grey" class="w-full rounded-lg">
+                                <p class="text-center mt-2 text-sm font-medium">Light Grey</p>
+                            </div>
+                            <div class="color-option" data-color="Powder Pink" onclick="selectColor(this, 'Powder Pink')">
+                                <img src="https://dfw7ggv03f58r.cloudfront.net/accounts/679b32fca497cd458b9f991d/products/679b4d04478ed1249386f9f5/679b4d07478ed1249386faf7.jpeg.resized2048.webp" alt="Powder Pink" class="w-full rounded-lg">
+                                <p class="text-center mt-2 text-sm font-medium">Powder Pink</p>
+                            </div>
+                            <div class="color-option" data-color="Mustard" onclick="selectColor(this, 'Mustard')">
+                                <img src="https://dfw7ggv03f58r.cloudfront.net/accounts/679b32fca497cd458b9f991d/products/679b4d04478ed1249386f9f5/679b4d07478ed1249386faf8.jpeg.resized2048.webp" alt="Mustard" class="w-full rounded-lg">
+                                <p class="text-center mt-2 text-sm font-medium">Mustard</p>
+                            </div>
+                            <div class="color-option" data-color="Blue Flog" onclick="selectColor(this, 'Blue Flog')">
+                                <img src="https://dfw7ggv03f58r.cloudfront.net/accounts/679b32fca497cd458b9f991d/products/679b4d04478ed1249386f9f5/679b4d07478ed1249386faf9.jpeg.resized2048.webp" alt="Blue Flog" class="w-full rounded-lg">
+                                <p class="text-center mt-2 text-sm font-medium">Blue Flog</p>
+                            </div>
+                            <div class="color-option" data-color="Sand" onclick="selectColor(this, 'Sand')">
+                                <img src="https://dfw7ggv03f58r.cloudfront.net/accounts/679b32fca497cd458b9f991d/products/679b4d04478ed1249386f9f5/679b4d06478ed1249386fabb.jpeg.resized2048.webp" alt="Sand" class="w-full rounded-lg">
+                                <p class="text-center mt-2 text-sm font-medium">Sand</p>
+                            </div>
+                            <div class="color-option" data-color="Deep Green" onclick="selectColor(this, 'Deep Green')">
+                                <img src="https://dfw7ggv03f58r.cloudfront.net/accounts/679b32fca497cd458b9f991d/products/679b4d04478ed1249386f9f5/679b4d06478ed1249386fabc.jpeg.resized2048.webp" alt="Deep Green" class="w-full rounded-lg">
+                                <p class="text-center mt-2 text-sm font-medium">Deep Green</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-900">Video Demo Produk</h3>
+                        <p class="text-sm text-gray-600 mb-4">Lihat produk dalam aksi</p>
+                        <video controls class="w-full rounded-lg">
+                            <source src="https://s3-ap-southeast-1.amazonaws.com/plugolive/vendor/245/product/id-11110105-6ke15-lxjfy3qrf0n14716005581738664020_1750148107274.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung video HTML5.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Specifications -->
+    <section id="specs" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Spesifikasi Produk</h2>
+                <p class="text-lg text-gray-600">Detail lengkap Danica Printed Scarf</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Keunggulan Produk</h3>
+                    <div class="space-y-4">
+                        <div class="spec-item">
+                            <i class="fas fa-leaf text-2xl text-shafira-blue mb-2"></i>
+                            <h4 class="font-semibold">Material Premium</h4>
+                            <p class="text-sm text-gray-600">Nesla - Lembut dan nyaman dipakai</p>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-ruler text-2xl text-shafira-blue mb-2"></i>
+                            <h4 class="font-semibold">Ukuran Sempurna</h4>
+                            <p class="text-sm text-gray-600">115x115 cm - Pas untuk semua gaya</p>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-medal text-2xl text-shafira-blue mb-2"></i>
+                            <h4 class="font-semibold">Finishing Premium</h4>
+                            <p class="text-sm text-gray-600">Baby seam - Detail yang rapi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Paket Termasuk</h3>
+                    <div class="bg-white border border-gray-200 rounded-2xl p-6 space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-box text-shafira-blue mr-3"></i>
+                            <span>Hard box packaging premium</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate text-shafira-blue mr-3"></i>
+                            <span>Sertifikat keaslian produk</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-gift text-shafira-blue mr-3"></i>
+                            <span>Kartu ucapan eksklusif</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-yellow-50 border border-yellow-200 rounded-2xl p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-exclamation-triangle text-yellow-600 mr-2"></i>
+                            <p class="text-sm text-yellow-800">
+                                <strong>Penting:</strong> Perbedaan warna maksimal 15% karena faktor pencahayaan
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-20 bg-shafira-light-gray">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Pesan Sekarang</h2>
+                <p class="text-lg text-gray-600">Pilih warna favoritmu dan pesan langsung</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <div class="text-center mb-8">
+                    <div class="text-3xl font-bold text-shafira-blue mb-2">Rp165.000</div>
+                    <div class="text-xl text-gray-500 line-through">Rp199.000</div>
+                </div>
+                
+                <!-- OrderOnline Embed -->
+                <div class="ooef">
+                    <form class="orderonline-embed-form" data-username="mila" data-product-slug="danica-printed-scarf" data-product-id="687a6ea37743ad5dc6054cdf" id="oo-embed-form-danica-printed-scarf-3869" data-origin="orderonline">
+                        <div class="ooef-loader">
+                            <style>
+                                .ooef-loader { visibility: hidden; opacity: 0; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; justify-content: center; align-items: center; flex-direction: column; animation: ooLoadingIn 10s ease; -webkit-animation: ooLoadingIn 10s ease; animation-fill-mode: forwards; overflow: hidden; }
+                                @keyframes ooLoadingIn { 0% { visibility: hidden; opacity: 0; } 20% { visibility: visible; opacity: 0; } 100% { visibility: visible; opacity: 1; } }
+                                @-webkit-keyframes ooLoadingIn { 0% { visibility: hidden; opacity: 0; } 20% { visibility: visible; opacity: 0; } 100% { visibility: visible; opacity: 1; } }
+                                .ooef-loader>div, .ooef-loader>div:after { border-radius: 50%; width: 2.5rem; height: 2.5rem; }
+                                .ooef-loader>div { font-size: 10px; position: relative; text-indent: -9999em; border: .25rem solid #f5f5f5; border-left: .25rem solid #55c4cf; -webkit-transform: translateZ(0); -ms-transform: translateZ(0); transform: translateZ(0); -webkit-animation: ooLoading 1.1s infinite linear; animation: ooLoading 1.1s infinite linear; }
+                                .ooef-loader.error>div { border-left: .25rem solid #ff4500; animation-duration: 5s; }
+                                @-webkit-keyframes ooLoading { 0% { -webkit-transform: rotate(0); transform: rotate(0); } 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+                                @keyframes ooLoading { 0% { -webkit-transform: rotate(0); transform: rotate(0); } 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+                            </style>
+                            <div aria-live="polite" role="status">
+                                <div>Loading...</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <script>
+                    if (typeof xLogError != 'function') {
+                        var xLogError = function(error) {
+                            var req = new XMLHttpRequest();
+                            var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                            var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                            req.open('POST', 'https://api.orderonline.id/log', true);
+                            req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                            req.send(params);
+                        };
+                    }
+                    try {
+                        if (typeof xEmbedScript != 'function') {
+                            var xEmbedScript = function() {
+                                ! function(w, d, e, v, id, t, s) {
+                                    if (d.getElementById(id)) return;
+                                    t = d.createElement(e);
+                                    t.async = !0;
+                                    t.src = v;
+                                    t.id = id;
+                                    s = d.getElementsByTagName(e)[0];
+                                    s.parentNode.insertBefore(t, s);
+                                }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                            };
+                        }
+                        if (typeof xEmbedInit != 'function') {
+                            var xEmbedInit = function(w, n) {
+                                if (w.ooe) return;
+                                n = w.ooe = function() {
+                                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                };
+                                if (!w._ooe) w._ooe = n;
+                                n.push = n;
+                                n.loaded = !0;
+                                n.version = '8.0.4';
+                                n.queue = [];
+                            };
+                        }
+                        xEmbedInit(window);
+                        ooe('setup', 'redirect', 'https://mila.orderonline.id');
+                        ooe('init', '5f1a7b8fa9bf807da24d83bb', '687a6ea37743ad5dc6054cdf', '687a6ea37743ad5dc6054ce0', 'oo-embed-form-danica-printed-scarf-3869', {
+                            "mode": "page",
+                            "action": "Klik untuk pemesanan",
+                            "title": "Form Pemesanan",
+                            "triggerPixel": true,
+                            "triggerGtm": true
+                        });
+                        if (!window.jQuery) {
+                            ! function(w, d, e, v, id, t, s) {
+                                if (d.getElementById(id)) return;
+                                t = d.createElement(e);
+                                t.async = !0;
+                                t.src = v;
+                                t.id = id;
+                                t.addEventListener('load', xEmbedScript);
+                                s = d.getElementsByTagName(e)[0];
+                                s.parentNode.insertBefore(t, s);
+                            }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                        } else {
+                            xEmbedScript();
+                        }
+                    } catch (e) {
+                        xLogError(e);
+                        throw e;
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <img src="https://plugolive.s3.ap-southeast-1.amazonaws.com/vendors/245/assets/image/1738632098935-Logo_Shafira_NEW-02.png" alt="Shafira" class="h-8 mb-4">
+                    <p class="text-gray-400">Hadirkan kecantikan dalam setiap penampilanmu dengan koleksi hijab premium dari Shafira.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Ikuti Kami</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8"></div>
+        </div>
+    </footer>
+
+    <script>
+        function changeImage(element) {
+            document.getElementById('gallery-main').src = element.src;
+            document.querySelectorAll('.gallery-thumbnail').forEach(img => img.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        function selectColor(element, colorName) {
+            document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('active'));
+            element.classList.add('active');
+            
+            // Update gallery image based on selected color
+            const colorImages = {
+                'Light Grey': 'https://down-id.img.susercontent.com/file/id-11134207-7rbka-m74foa1s08c47b.webp',
+                'Powder Pink': 'https://down-id.img.susercontent.com/file/id-11134207-7r991-lqu9ogyx0nqf55.webp',
+                'Mustard': 'https://down-id.img.susercontent.com/file/id-11134207-7r98x-lqu9ogx9339l14.webp',
+                'Blue Flog': 'https://down-id.img.susercontent.com/file/id-11134207-7rbka-m74foa1s08c47b.webp',
+                'Sand': 'https://down-id.img.susercontent.com/file/id-11134207-7r991-lqu9ogyx0nqf55.webp',
+                'Deep Green': 'https://down-id.img.susercontent.com/file/id-11134207-7r98x-lqu9ogx9339l14.webp'
+            };
+            
+            if (colorImages[colorName]) {
+                document.getElementById('gallery-main').src = colorImages[colorName];
+                document.getElementById('main-image').src = colorImages[colorName];
+                
+                // Also update the active thumbnail
+                document.querySelectorAll('.gallery-thumbnail').forEach(img => img.classList.remove('active'));
+                document.querySelector(`.gallery-thumbnail[src="${colorImages[colorName]}"]`).classList.add('active');
+            }
+        }
+
+        function scrollToOrder() {
+            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToSpecs() {
+            document.getElementById('specs').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
